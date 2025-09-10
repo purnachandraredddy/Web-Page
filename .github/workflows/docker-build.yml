@@ -28,6 +28,27 @@ jobs:
               with:
                 context: .
                 push: true
+                cache-from: type=gha
+                cache-to: type=gha,mode=max
                 tags: |
                   ${{ secrets.DOCKERHUB_USERNAME }}/docker-2-project:latest
                   ${{ secrets.DOCKERHUB_USERNAME }}/docker-2-project:${{ github.sha }}
+
+            - name: Run Trivy vulnerability scan 
+              uses: aquasecurity/trivy-action@v3
+              with:
+                scan-type: "image"
+                image-ref: ${{ secrets.DOCKERHUB_USERNAME }}/Docker-2-Project:${{github.sha}}
+                format: 'sarif'
+                output: 'trivy-report.sarif'
+
+            - name: Intialize CodeQl
+              uses: github/codeql-action/init@v3
+              with:
+                languages: go
+
+            - name: Autobuild
+              uses: github/codeql-action/autobuild@v3
+
+            - name: Perform CodeQl Analysis
+              uses: github/codeql-action/analyze@v3
