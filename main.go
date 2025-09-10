@@ -122,6 +122,38 @@ func main() {
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
         
+git a        .blog-section {
+            margin: 40px 0;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .blog-section h2 {
+            font-size: 2em;
+            margin-bottom: 25px;
+            background: linear-gradient(45deg, #4ecdc4, #45b7d1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+        }
+        
+        .blog-content p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            opacity: 0.95;
+            text-align: left;
+        }
+        
+        .blog-content p:last-child {
+            margin-bottom: 0;
+            font-style: italic;
+            opacity: 0.9;
+        }
+        
         .footer {
             margin-top: 40px;
             font-size: 0.9em;
@@ -169,6 +201,19 @@ func main() {
         <div class="description">
             Let's connect if we're on the same page! I'm always excited to discuss cloud technologies, 
             share knowledge, and collaborate on interesting projects.
+        </div>
+        
+        <div class="blog-section">
+            <h2>Beyond the Code</h2>
+            <div class="blog-content">
+                <p>When I'm not diving deep into cloud technologies, you'll find me exploring the world and embracing life's adventures. I'm an extrovert who thrives on meaningful connections and enjoys spending quality time with people from all walks of life.</p>
+                
+                <p>Traveling is my passion – there's something magical about discovering new cultures, tasting local cuisines, and creating memories in places I've never been. Each journey teaches me something new and broadens my perspective on life.</p>
+                
+                <p>Fitness is a cornerstone of my daily routine. Whether I'm hitting the gym for strength training or going for a peaceful run in the morning, these activities bring me balance and inner peace. There's nothing quite like the clarity that comes from a good workout or a refreshing jog.</p>
+                
+                <p>I believe in living life to the fullest – connecting with people, staying active, and finding joy in both the big adventures and the simple moments. Life is about balance, growth, and making meaningful connections along the way.</p>
+            </div>
         </div>
         
         <a href="mailto:purnachandra@example.com" class="connect-btn">Let's Connect!</a>
