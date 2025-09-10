@@ -122,7 +122,7 @@ func main() {
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
         
-git a        .blog-section {
+        .blog-section {
             margin: 40px 0;
             padding: 30px;
             background: rgba(255, 255, 255, 0.05);
