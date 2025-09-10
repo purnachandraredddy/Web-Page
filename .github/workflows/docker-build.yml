@@ -38,7 +38,7 @@ jobs:
               uses: aquasecurity/trivy-action@master
               with:
                 scan-type: "image"
-                image-ref: ${{ secrets.DOCKERHUB_USERNAME }}/Docker-2-Project:${{github.sha}}
+                image-ref: ${{ secrets.DOCKERHUB_USERNAME }}/docker-2-project:${{github.sha}}
                 format: 'sarif'
                 output: 'trivy-report.sarif'
 
